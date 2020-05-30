@@ -1,0 +1,8 @@
+- ssh john@172.20.15.20 (theRipper) -> emptyFile erstellen (leer)
+- ssh root@172.20.15.20 (s3cure) -> credentials.txt (YWRtaW46U3VwcjNtM3A0NTV3MHJk) ; entspricht admin:Supr3m3p455w0rd
+
+-ssh admin@172.20.15.21 (Supr3m3p455w0rd) -> 
+	host.txt -> host: 172.20.15.22
+	knock-order.txt ->	Knock Knock: 1234 1337 4321
+				Close Port: 4321 1337 1234
+				Protocol: none

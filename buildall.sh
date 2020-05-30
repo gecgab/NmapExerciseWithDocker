@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## create network
-docker network create --driver=bridge --subnet=172.20.0.0/16 -o com.docker.network.bridge.name=psec-net psec-net
+docker network create --driver=bridge --subnet=172.20.0.0/20 -o com.docker.network.bridge.name=psec-net psec-net
 
 ## build containers
 docker build -t psec-image00 ./psec-container00 # standard ubuntu (has to be built first)
