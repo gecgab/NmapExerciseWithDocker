@@ -5,7 +5,6 @@ RUN apt-get -y install net-tools
 RUN apt-get -y install iproute2
 RUN apt-get -y install iptables
 RUN apt-get -y install vim
-RUN apt-get -y install ipset
 RUN apt-get -y install ncat
 
 
@@ -23,6 +22,6 @@ RUN echo "tzdata tzdata/Areas select Europe" > /tmp/preseed.txt; \
 
 RUN apt-get -y install apache2
 
-ENTRYPOINT service apache2 start && /bin/bash
+ENTRYPOINT /bin/bash
 
 EXPOSE 80

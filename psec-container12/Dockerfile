@@ -1,4 +1,6 @@
-FROM psecubuntu:latest
+FROM psec-image00
+
+RUN apt-get -y install ipset
 
 RUN bash -c "echo -e Listen 27 > /etc/apache2/ports.conf"
 
