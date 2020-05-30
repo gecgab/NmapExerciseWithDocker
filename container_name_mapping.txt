@@ -7,7 +7,7 @@ psec-container05:
 psec-container06: telnet+http (ctf entrypoint)
 psec-container07:
 psec-container08:
-psec-container09:
+psec-container09: metasploitable2
 
 psec-container10: nullscan
 psec-container11: sourceport

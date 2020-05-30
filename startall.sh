@@ -6,6 +6,9 @@ docker rm $(docker ps -a -q) --force
 ## sourceport
 docker run -dit --cap-add=NET_ADMIN --restart always --network=psec-net --ip=172.20.0.6 --name=psec-container06 psec-image06
 
+## metasploitable
+docker run -dit  --restart always --network=psec-net --ip=172.20.0.9 --name psec-container09 tleemcjr/metasploitable2:latest sh -c "/bin/services.sh && bash"
+
 ## nullscan
 docker run -dit --cap-add=NET_ADMIN --restart always --network=psec-net --ip=172.20.1.10 --name=psec-container10 psec-image10
 
@@ -14,6 +17,9 @@ docker run -dit --cap-add=NET_ADMIN --restart always --network=psec-net --ip=172
 
 ## antiportscan
 docker run -dit --cap-add=NET_ADMIN --restart always --network=psec-net --ip=172.20.1.12 --name=psec-container12 psec-image12
+
+## Mac-Spoof
+docker run -dit --cap-add=NET_ADMIN --restart always --network=psec-net --ip=172.20.1.13 --name=psec-container13 psec-image13
 
 ## SSH Base64
 docker run -dit --cap-add=NET_ADMIN --restart always --network=psec-net --ip=172.20.15.20 --name=psec-container20 psec-image20

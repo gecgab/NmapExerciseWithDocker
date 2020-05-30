@@ -6,3 +6,4 @@
 	knock-order.txt ->	Knock Knock: 1234 1337 4321
 				Close Port: 4321 1337 1234
 				Protocol: none
+	knockWithKali.txt -> knocking with kali: knock <host> <port[:proto]> [<port>[:proto]] ...
