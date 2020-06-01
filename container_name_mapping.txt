@@ -1,11 +1,11 @@
 psec-container00: standard ubuntu
 psec-container01:
-psec-container02:
-psec-container03:
+psec-container02: ubuntu with nc
+psec-container03: nginx (default)
 psec-container04:
 psec-container05:
 psec-container06: telnet+http (ctf entrypoint)
-psec-container07:
+psec-container07: ubuntu with nc
 psec-container08:
 psec-container09: metasploitable2
 

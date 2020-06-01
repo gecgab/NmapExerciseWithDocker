@@ -3,8 +3,17 @@
 ## force remove all containers
 docker rm $(docker ps -a -q) --force
 
-## sourceport
+## ubuntu with nc listening to ports 22,111,443,3480,3659
+docker run -dit --restart always --network=psec-net --ip=172.20.0.2 --name=psec-container02 psec-image02
+
+## default nginx server (will be downloaded and built automatically)
+docker run -dit --restart always --network=psec-net --ip=172.20.0.3 --name=psec-container03 nginx
+
+## telnet
 docker run -dit --cap-add=NET_ADMIN --restart always --network=psec-net --ip=172.20.0.6 --name=psec-container06 psec-image06
+
+## ubuntu with nc listening to ports 22,53,99,1234
+docker run -dit --restart always --network=psec-net --ip=172.20.0.7 --name=psec-container07 psec-image07
 
 ## metasploitable
 docker run -dit  --restart always --network=psec-net --ip=172.20.0.9 --name psec-container09 tleemcjr/metasploitable2:latest sh -c "/bin/services.sh && bash"

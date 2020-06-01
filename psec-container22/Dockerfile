@@ -12,7 +12,12 @@ RUN sed -i 's/--dport 22/--dport 80/g' /etc/knockd.conf
 RUN sed -i 's/START_KNOCKD=0/START_KNOCKD=1/' /etc/default/knockd
 
 COPY index.html /var/www/html/index.html
+COPY nmap_bnr_matrix_iain.gif /var/www/html/nmap_bnr_matrix_iain.gif
 
-ENTRYPOINT iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT && iptables -A INPUT -j DROP && service knockd start &&  service apache2 start && /bin/bash
+ENTRYPOINT iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT && \
+	iptables -A INPUT -j DROP && \
+	service knockd start &&  \
+	service apache2 start && \
+	/bin/bash
 
 EXPOSE 80
