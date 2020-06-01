@@ -3,7 +3,7 @@ psec-container01:
 psec-container02: ubuntu with nc
 psec-container03: nginx (default)
 psec-container04:
-psec-container05:
+psec-container05: ubuntu with samba
 psec-container06: telnet+http (ctf entrypoint)
 psec-container07: ubuntu with nc
 psec-container08:

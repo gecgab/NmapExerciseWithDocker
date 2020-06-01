@@ -14,6 +14,8 @@ RUN sed -i 's/START_KNOCKD=0/START_KNOCKD=1/' /etc/default/knockd
 COPY index.html /var/www/html/index.html
 COPY nmap_bnr_matrix_iain.gif /var/www/html/nmap_bnr_matrix_iain.gif
 
+RUN chmod 555 /var/www/html/index.html && chmod 555 /var/www/html/nmap_bnr_matrix_iain.gif
+
 ENTRYPOINT iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT && \
 	iptables -A INPUT -j DROP && \
 	service knockd start &&  \

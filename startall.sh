@@ -9,6 +9,9 @@ docker run -dit --restart always --network=psec-net --ip=172.20.0.2 --name=psec-
 ## default nginx server (will be downloaded and built automatically)
 docker run -dit --restart always --network=psec-net --ip=172.20.0.3 --name=psec-container03 nginx
 
+## ubuntu with default samba running
+docker run -dit --restart always --network=psec-net --ip=172.20.0.5 --name=psec-container05 psec-image05
+
 ## telnet
 docker run -dit --cap-add=NET_ADMIN --restart always --network=psec-net --ip=172.20.0.6 --name=psec-container06 psec-image06
 
