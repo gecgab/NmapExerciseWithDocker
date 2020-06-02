@@ -1,0 +1,3 @@
+In der Kali VM auf dem Desktop ein Ordner mit "Hilfsmaterial"
+	- Textfile mit IP-Adresse & Bemerkungen
+		Beispiel: 172.20.0.01	Kali VM
