@@ -5,10 +5,10 @@ RUN apt-get -y install build-essential
 RUN git clone https://github.com/drk1wi/portspoof
 RUN cd portspoof && ./configure && make && make install
 
-RUN bash -c "echo -e Listen 82 > /etc/apache2/ports.conf"
+RUN bash -c "echo -e Listen 13 > /etc/apache2/ports.conf"
 COPY index.html /var/www/html/index.html
 
 ENTRYPOINT iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT && \
-        iptables -t nat -A PREROUTING -i eth0 -p tcp -m tcp --dport 1:81 -j REDIRECT --to-ports 4444 && \
-        iptables -t nat -A PREROUTING -i eth0 -p tcp -m tcp --dport 83:65535 -j REDIRECT --to-ports 4444 && \
+        iptables -t nat -A PREROUTING -i eth0 -p tcp -m tcp --dport 1:12 -j REDIRECT --to-ports 4444 && \
+        iptables -t nat -A PREROUTING -i eth0 -p tcp -m tcp --dport 14:65535 -j REDIRECT --to-ports 4444 && \
         service apache2 start && portspoof -c portspoof/tools/portspoof.conf -s portspoof/tools/portspoof_signatures && /bin/bash

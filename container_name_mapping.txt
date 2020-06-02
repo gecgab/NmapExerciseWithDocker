@@ -9,10 +9,10 @@ psec-container07: ubuntu with nc
 psec-container08:
 psec-container09: metasploitable2
 
-psec-container10: nullscan
-psec-container11: sourceport
-psec-container12: antiportscan
-psec-container13: macspoof
+psec-container10: portspoof 13
+psec-container11: sourceport 21 (--sport=20)
+psec-container12: antiportscan 81
+psec-container13: macspoof 53
 
 psec-container20: SSH Host (Base64)
 psec-container21: SSH Host (Port-Knock Reihenfolge)
