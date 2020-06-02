@@ -2,6 +2,7 @@ FROM psec-image00
 
 RUN apt-get -y install ipset
 
+COPY index.html /var/www/html/index.html
 RUN bash -c "echo -e Listen 27 > /etc/apache2/ports.conf"
 
 ENTRYPOINT service apache2 start && \
