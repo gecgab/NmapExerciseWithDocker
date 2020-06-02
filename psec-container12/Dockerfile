@@ -3,7 +3,7 @@ FROM psec-image00
 RUN apt-get -y install ipset
 
 COPY index.html /var/www/html/index.html
-RUN bash -c "echo -e Listen 81 > /etc/apache2/ports.conf"
+RUN bash -c "echo -e Listen 79 > /etc/apache2/ports.conf"
 
 ENTRYPOINT service apache2 start && \
 	ipset create port_scanners hash:ip family inet hashsize 32768 maxelem 65536 timeout 10 && \

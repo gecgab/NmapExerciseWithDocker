@@ -1,3 +1,4 @@
+
 psec-container00: standard ubuntu
 psec-container01:
 psec-container02: ubuntu with nc
@@ -9,9 +10,9 @@ psec-container07: ubuntu with nc
 psec-container08:
 psec-container09: metasploitable2
 
-psec-container10: portspoof 13
+psec-container10: portspoof 37
 psec-container11: sourceport 21 (--sport=20)
-psec-container12: antiportscan 81
+psec-container12: antiportscan 79
 psec-container13: macspoof 53
 
 psec-container20: SSH Host (Base64)

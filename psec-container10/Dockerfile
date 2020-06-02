@@ -5,7 +5,7 @@ RUN apt-get -y install build-essential
 RUN git clone https://github.com/drk1wi/portspoof
 RUN cd portspoof && ./configure && make && make install
 
-RUN bash -c "echo -e Listen 13 > /etc/apache2/ports.conf"
+RUN bash -c "echo -e Listen 37 > /etc/apache2/ports.conf"
 COPY index.html /var/www/html/index.html
 
 ENTRYPOINT iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT && \
