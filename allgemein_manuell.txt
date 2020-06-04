@@ -1,3 +1,13 @@
 In der Kali VM auf dem Desktop ein Ordner mit "Hilfsmaterial"
 	- Textfile mit IP-Adresse & Bemerkungen
 		Beispiel: 172.20.0.01	Kali VM
+		
+pcregrep installieren:
+	sudo apt-get install pcregrep
+	
+service erstellen:
+	(siehe service File)
+
+Script in /etc/init.d/ 
+	chmod nicht vergessen
+	
