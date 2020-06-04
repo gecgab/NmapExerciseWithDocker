@@ -14,7 +14,8 @@ Script in /etc/init.d/
 sudo systemctl daemon-reload
 sudo systemctl enable startupScript
 
-
+git Sachen verstecken
+TRASH LEEREN!
 
 panel anpassen
 tastatur layout -> deutsch
