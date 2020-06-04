@@ -1,0 +1,11 @@
+
+[Unit]
+Description=Script that greps the MAC Address of the psec-net and starts the MAC-Spoof Container
+After=syslog.target network.target docker.service
+
+[Service]
+Type=oneshot
+ExecStart=/etc/init.d/dockerHelper.sh
+
+[Install]
+WantedBy=multi-user.target
