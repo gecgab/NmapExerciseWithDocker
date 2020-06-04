@@ -2,9 +2,9 @@
 
 # put this script into /etc/init.d/
 
-macNetFound=true
+macNotFound=true
 while "$macNotFound"; do
-    kaliMAC$(ifconfig | pcregrep -M -o "psec\-net.*(\n|.)*\K02:42(:\w\w){4}")
+    kaliMAC=$(ifconfig | pcregrep -M -o "psec\-net.*(\n|.)*\K02:42(:\w\w){4}")
     if [ "$kaliMAC" != "" ]
     then
         macNotFound=false
