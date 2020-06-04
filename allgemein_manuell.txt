@@ -11,3 +11,12 @@ service erstellen:
 Script in /etc/init.d/ 
 	chmod nicht vergessen
 	
+sudo systemctl daemon-reload
+sudo systemctl enable startupScript
+
+
+
+panel anpassen
+tastatur layout -> deutsch
+FIREFOX about:config -> network.security.ports.banned.override (erstellen) und Ports hinzufügen (26,21,76,53)
+CLEAR HISTORY bash (sudo und kali) - history -c && history -w && exit
