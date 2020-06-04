@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## create network
-docker network create --driver=bridge --subnet=172.20.0.0/20 -o com.docker.network.bridge.name=psec-net psec-net
+# docker network create --driver=bridge --subnet=172.20.0.0/20 -o com.docker.network.bridge.name=psec-net psec-net
 
 ## PULL Metasploitable Container!!
 # docker pull tleemcjr/metasploitable2

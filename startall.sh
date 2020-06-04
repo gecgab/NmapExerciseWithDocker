@@ -31,7 +31,7 @@ docker run -dit --cap-add=NET_ADMIN --restart always --network=psec-net --ip=172
 docker run -dit --cap-add=NET_ADMIN --restart always --network=psec-net --ip=172.20.1.12 --name=psec-container12 psec-image12
 
 ## Mac-Spoof
-docker run -dit --cap-add=NET_ADMIN --restart always --network=psec-net --ip=172.20.1.13 --name=psec-container13 psec-image13
+docker run -dit --cap-add=NET_ADMIN --restart always --network=psec-net --ip=172.20.1.13 --name=psec-container13 psec-image13 "01:02:03:04:05:06"
 
 ## SSH Base64
 docker run -dit --cap-add=NET_ADMIN --restart always --network=psec-net --ip=172.20.15.20 --name=psec-container20 psec-image20
